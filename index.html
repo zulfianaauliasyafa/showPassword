@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SHOW PASSWORD</title>
+	<script type="text/javascript" src="jquery.js"></script>
+<style>
+    body{
+        padding-left: 50px;
+    }
+</style>
+</head>
+<body>
+
+	<h3 style="text-align: center; font-size: 40px;">FORM LOG IN</h3>
+
+	<br><br>
+
+	<form>
+		<label>USERNAME</label>
+		<br><br>
+		<input type="text" name="">
+
+		<br><br>
+
+		<label>PASSWORD</label>
+		<br><br>
+		<input type="password" name="" class="pass">
+
+		<br>
+
+		<input type="checkbox" name="" class="cbox"> Show Password
+
+		<br>
+        <br>
+        <br>
+
+		<button>LOG IN</button>
+
+	</form>
+
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+
+			$('.cbox').click(function(){
+				if($(this).is(':checked')){
+					$('.pass').attr('type', 'text');
+				}
+				else{
+					$('.pass').attr('type', 'password');
+				}
+			});			
+		});
+			
+	</script>
+</body>
+</html>
